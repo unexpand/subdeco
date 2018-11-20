@@ -1,5 +1,35 @@
-@import '_color';
-body {
-  background: $bgcolor;
-  color: $color;
+@import './materialize/sass/materialize';
+@import 'color';
+
+html, body {
+  height:100%;
+  @extend .amber, .lighten-5;
 }
+@media #{$small-and-down} {
+  .header {
+      height: 10%;
+      width: 100%;
+      background-color: $header-color-small;
+      .sd-logo{
+        margin: 1em;
+        font-weight: bold;
+        font-size: 1em;
+      }
+    }
+  .content {
+    padding: 1em;
+    .sd-item-pic {
+      padding: 1em;
+      height: 9em;
+      text-align: center;
+      background-size: cover;
+      background-image: url("https://images.unsplash.com/photo-1542570699-a61356daf7b9?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=cedc667197ccc63ada7139bdc0828e7f&auto=format&fit=crop&w=1534&q=80");
+    }
+  }
+  }
+@media #{$medium-and-up} {
+  .header {
+      height: 20%;
+      background-color: $header-color-medium;
+    }
+  }
